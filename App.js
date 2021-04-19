@@ -13,6 +13,8 @@ import HomeScreen from './Screen/HomeScreen'
 import AddChat from './Screen/AddChatScreen'
 import ChatScreen from './Screen/ChatScreen'
 import EditScreen from './Screen/EditProfileScreen'
+import ProScreen from './Screen/Profile'
+import SplashScreen from './Screen/Splash'
 
 const Stack = createStackNavigator();
 
@@ -31,15 +33,16 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        //initialRouteName="Home"
+        initialRouteName="Splash"
         screenOptions={globalScreenOptions}>
-        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Slpash" component={SplashScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Register" component={RegisterScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="AddChat" component={AddChat} />
         <Stack.Screen name="Chat" component={ChatScreen} />
         <Stack.Screen name="Edit" component={EditScreen} options={{ headerShown: false }} />
-
+        <Stack.Screen name="Pro" component={ProScreen} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -11,11 +11,6 @@ const HomeScreen = ({ navigation }) => {
     const [chats, setChats] = useState([]);
 
 
-    const signOut = () => {
-        auth().signOut().then(() => {
-            navigation.replace("Login")
-        });
-    };
 
     useEffect(() => {
         const unsubscribe = firestore()
@@ -40,7 +35,7 @@ const HomeScreen = ({ navigation }) => {
             },
             headerLeft: () => (
                 <View style={{ marginLeft: 10 }}>
-                    <TouchableOpacity onPress={() => navigation.navigate('Edit')} activeOpacity={0.5}>
+                    <TouchableOpacity onPress={() => navigation.push('Pro')} activeOpacity={0.5}>
                         <Avatar
 
                             rounded

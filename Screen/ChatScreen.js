@@ -91,7 +91,7 @@ const ChatScreen = ({ navigation, route }) => {
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>
-            <StatusBar style={{ backgroundColor: "blue" }} />
+            <StatusBar barStyle='dark-content' backgroundColor="#6633CC" />
             <KeyboardAvoidingView behavior={Platform.OS === "android" ? "padding" : "height"}
                 style={styles.container}
                 keyboardVerticalOffset={-200}>

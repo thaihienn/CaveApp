@@ -2,6 +2,7 @@ import React, { Component, useLayoutEffect, useState } from 'react'
 import { Alert, Button, StyleSheet, Text, View } from 'react-native'
 import { Icon, Input } from 'react-native-elements';
 import firestore from '@react-native-firebase/firestore';
+import { StatusBar } from 'react-native';
 
 
 
@@ -28,6 +29,7 @@ const AddChatScreen = ({ navigation }) => {
     return (
 
         <View style={styles.container}>
+            <StatusBar barStyle='dark-content' backgroundColor="#6633CC" />
             <Input
                 placeholder="Enter Chat Name"
                 value={input}
